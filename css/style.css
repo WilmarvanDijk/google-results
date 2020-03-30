@@ -9,6 +9,7 @@
     padding: 0;
     font-family: arial, sans-serif;
     font-size: 13px;
+    background: #FFF;
 }
 
 ul {
@@ -35,114 +36,200 @@ ul {
 }
 
 /*Begin Header*/
-.header {
+.header-container {
     border-bottom: 1px solid rgb(235, 235, 235);
     box-sizing: border-box;
     grid-area: header;
     display: grid;
-    /*kan hier opzich nog met grid template areas gaan werken indien nodig (is misschien wel mooiere oplossing*/ 
+    /*kan hier opzich nog met grid template areas gaan werken indien nodig (is misschien wel mooiere oplossing*/
     grid-template-columns: inherit;
     grid-template-rows: 65px 58px;
     /* place-self: stretch; */
 }
     /*Begin Figure*/
-    .figure {
+    .header-figure {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
-        justify-self: start;
-        align-self: start;
-        /* margin: 19px 0px 0px 30px; */
-        padding: 23px 0px 0px 28px;
+        padding: 28px 30px 0px 30px;
     }
 
-        .figure img {
-            /* display: block; */
+        .header-figure img {
             height: 30px;
             width: 92px;
         }
     /*End Figure*/
 
     /*Begin form*/
-    .form {
+    .header-form {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
-        justify-self: start;
-        align-self: start;
         padding: 19px 0px 0px 1px;
     }
 
-        .search-bar {
+        .header-form-searchbar {
+            border: 1px solid #DFE1E5; /*#DFE1E5*/
+            /* box-sizing: bordesr-box; */
             display: flex;
             flex-direction: row;
-            justify-content: center; 
+            /* justify-content: center;  */
             align-items: center;
-            /* margin-left: auto; */
-            /* margin-right: auto; */
-            /* margin-top: 19px; */
-            border: 1px solid #DFE1E5;
-            box-sizing: border-box;
             border-radius: 24px;
-            width: 582px;
+            width: 690px;
             height: 44px;
         }
 
-        #search-bar:hover {
+        .header-form-searchbar:hover {
             box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
             border-color: rgba(223, 225, 229, 0);
         }
-        
+
             .input-bar {
+                /* border: 1px solid green; */
                 border: 0;
                 color: rgba(0, 0, 0, 0.87);
                 font-size: 16px;
                 height: 34px;
-                margin: auto 10px auto 10px;
-                width: 487px;
-            } 
-            
+                margin: auto 10px auto 20px;
+                width: 574px;
+            }
+
             textarea:focus, input:focus { /*Used to delete blue outline on searchbar when selecting it*/
                 outline: none;
             }
-            
+
             #google-search {
                 height: 17.49px;
                 width: 17.49px;
+                margin: 0 11.5px 0 16.5px;
             }
-            
+
             #google-microphone {
                 height: 24px;
                 width: 24px;
             }
     /*End Form*/
+
     /*Begin Nav*/
-    .nav {
+    .header-navigation-bar {
         grid-column: 2 / span 1;
         grid-row: 2 / span 1;
-        place-self: stretch;
     }
 
-        .nav ul {
+        .header-navigation-bar ul {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            margin: 7px 0px;
+            padding: 0px 0px;
         }
 
-            .nav ul li:nth-child(6) {
-                margin-right: 50px;
+            .header-navigation-bar ul li {
+                height: 47px;
+                width: 80px;
+                margin: 0px 1px 0px 1px;
+            }
+
+            .header-navigation-bar ul li a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 47px;
+                color: #5F6368;
+                text-decoration: none;
+            }
+
+            .header-navigation-bar ul li a svg {
+                margin-right: 5px;
+                height: 16px;
+                width: 16px;
+                fill: #5F6368;
+            }
+
+            .header-navigation-bar ul li:nth-child(1) {
+                margin-left: 10px;
+                width: 64.69px; 
+            }
+
+            .header-navigation-bar ul li:nth-child(1) a {
+                color: #1A73E9;
+                border-bottom: 3px solid #1A73E9;
+            }
+
+            .header-navigation-bar ul li:nth-child(2) {
+                width: 74.8px;
+            }
+
+            .header-navigation-bar ul li:nth-child(3) {
+                width: 85.6px;
+            }
+
+            .header-navigation-bar ul li:nth-child(4) {
+                width: 85px;
+            }
+
+            .header-navigation-bar ul li:nth-child(5) {
+                width: 98px;
+            }
+
+            .header-navigation-bar ul li:nth-child(6) {
+                width: 63.63px;
+            }
+
+            .header-navigation-bar ul li:nth-child(6) a svg{
+                margin-right: 0px;
+            }
+
+            .header-navigation-bar ul li:nth-child(7) {
+                margin-left: 32px;
+                width: 87.78px;
+            }
+
+            .header-navigation-bar ul li:nth-child(8) {
+                width: 54.36px;
             }
     /*End Nav*/
-    /*Begin Additional*/
-    .additional {
+
+    /*Begin header-apps-bar*/
+    .header-apps-bar {
         grid-column: 3 / span 1;
         grid-row: 1 / span 1;
         place-self: end;
-    }
-    /*End Additional*/
+        margin-right: 14px;
+        display: flex;
+        flex-direction: row;
+    }   
+
+        .header-apps-bar a {
+            margin: 4px;
+        }
+
+        .header-apps-bar a:hover{
+            background-color: rgba(60, 64, 67, 0.08);
+            border-radius: 50%;
+        }
+
+        .header-apps-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px; 
+        }
+
+            .header-apps-login {
+                border-radius: 50px;
+            }
+
+            .header-apps-apps{
+                fill: #5F6368;
+                height: 24px;
+                width: 24px;
+            }
+    /*End header-apps-bar*/
 /*End Header*/
 
-/*Begin Main*/ 
+/*Begin Main*/
 .main {
-    border: 1px solid rgb(235, 235, 235);
+    /* border: 1px solid rgb(235, 235, 235); */
     box-sizing: border-box;
     grid-area: main;
     display: flex;
@@ -199,7 +286,7 @@ ul {
         .main-table-header {
             border-top: 1px solid #E5E5E5;
         }
-            
+
         .main-table-element {
             border-top: 1px solid #E5E5E5;
         }
@@ -214,7 +301,7 @@ ul {
     }
 
         .main-related-result-header {
-            
+
         }
 
         .main-related-result-content {
