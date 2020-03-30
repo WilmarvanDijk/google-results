@@ -1,0 +1,303 @@
+ body {
+    /* border: 5px solid black; */
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    /* border: 5px solid red; */
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+    grid-template-columns: 160px 815px auto; /*160px 815px auto*/
+    grid-template-rows: 123px auto 80px; /*123px auto 80px*/
+    grid-gap: 0px;
+}
+
+/*Begin Header*/
+.header {
+    border-bottom: 1px solid rgb(235, 235, 235);
+    box-sizing: border-box;
+    grid-area: header;
+    display: grid;
+    /*kan hier opzich nog met grid template areas gaan werken indien nodig (is misschien wel mooiere oplossing*/ 
+    grid-template-columns: inherit;
+    grid-template-rows: 65px 58px;
+    /* place-self: stretch; */
+}
+    /*Begin Figure*/
+    .figure {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        justify-self: start;
+        align-self: start;
+        /* margin: 19px 0px 0px 30px; */
+        padding: 23px 0px 0px 28px;
+    }
+
+        .figure img {
+            /* display: block; */
+            height: 30px;
+            width: 92px;
+        }
+    /*End Figure*/
+
+    /*Begin form*/
+    .form {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        justify-self: start;
+        align-self: start;
+        padding: 19px 0px 0px 1px;
+    }
+
+        .search-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; 
+            align-items: center;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            /* margin-top: 19px; */
+            border: 1px solid #DFE1E5;
+            box-sizing: border-box;
+            border-radius: 24px;
+            width: 582px;
+            height: 44px;
+        }
+
+        #search-bar:hover {
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+        
+            .input-bar {
+                border: 0;
+                color: rgba(0, 0, 0, 0.87);
+                font-size: 16px;
+                height: 34px;
+                margin: auto 10px auto 10px;
+                width: 487px;
+            } 
+            
+            textarea:focus, input:focus { /*Used to delete blue outline on searchbar when selecting it*/
+                outline: none;
+            }
+            
+            #google-search {
+                height: 17.49px;
+                width: 17.49px;
+            }
+            
+            #google-microphone {
+                height: 24px;
+                width: 24px;
+            }
+    /*End Form*/
+    /*Begin Nav*/
+    .nav {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        place-self: stretch;
+    }
+
+        .nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+            .nav ul li:nth-child(6) {
+                margin-right: 50px;
+            }
+    /*End Nav*/
+    /*Begin Additional*/
+    .additional {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+        place-self: end;
+    }
+    /*End Additional*/
+/*End Header*/
+
+/*Begin Main*/ 
+.main {
+    border: 1px solid rgb(235, 235, 235);
+    box-sizing: border-box;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* place-self: stretch; */
+}
+
+    .main-result-container {
+        border: 1px solid rgb(235, 235, 235);
+        /* height: 100px; */
+        line-height: 16.8px;
+        height: 119px;
+        width: 600px;
+        margin: 0px 0px 27px 20px;
+    }
+
+    .main-video-container {
+        border: 1px solid rgb(235, 235, 235);
+        height: 343.105px;
+        width: 660px;
+        margin: 0px 0px 27px 20px;
+    }
+
+        .main-video-header {
+            height: 26px;
+        }
+
+        .main-video-content-container {
+            /* border: 1px solid red; */
+            height: 309.109px;
+            width: 660px;
+            display: flex;
+            flex-direction: row;
+        }
+
+            .main-video-content {
+                border: 1px solid #DFE1E5;
+                border-radius: 8px;
+                padding: 4px;
+                margin: 4px;
+                height: 301.109px;
+                width: 212px;
+            }
+
+
+    .main-table-container {
+        border: 1px solid rgb(235, 235, 235);
+        height: 220px;
+        width: 652px;
+        margin: 0px 0px 27px 20px;
+    }
+
+        .main-table-header {
+            border-top: 1px solid #E5E5E5;
+        }
+            
+        .main-table-element {
+            border-top: 1px solid #E5E5E5;
+        }
+
+
+
+    .main-related-result-container {
+        border: 1px solid rgb(235, 235, 235);
+        height: 100px;
+        width: 600px;
+        margin: 0px 0px 27px 20px;
+    }
+
+        .main-related-result-header {
+            
+        }
+
+        .main-related-result-content {
+
+        }
+
+            .main-related-result-list {
+                display: flex;
+                flex-direction: row;
+            }
+
+    .main-google-navigation-container {
+        border: 1px solid rgb(235, 235, 235);
+        height: 100px;
+        width: 600px;
+        margin: 0px 0px 27px 20px;
+    }
+        .main-google-navigation-container ul {
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+            /* height: 10px;
+            width: 10px; */
+            /* margin: 0px 0px 27px 20px; */
+        }
+
+        .main-google-navigation-container ul li {
+            background-image: url(https://www.google.com/images/nav_logo299.webp);
+            /* border: 1px solid red; */
+            background-position: -74px 0;
+            height: 40px;
+            width: 20px;
+            /* margin: 0px 0px 27px 20px; */
+        }
+
+        .main-google-navigation-container ul li:nth-child(1) {
+            background-position: -24px 0;
+            width: 28px;
+            /* margin: 0px 0px 27px 20px; */
+        }
+
+        .main-google-navigation-container ul li:nth-child(2) {
+            background-position: -53px 0;
+            /* margin: 0px 0px 27px 20px; */
+        }
+
+        .main-google-navigation-container ul li:nth-child(n +3):nth-child(-n + 11) {
+            /* background-position: -74px 0; */
+            /* margin: 0px 0px 27px 20px; */
+        }
+
+        .main-google-navigation-container ul li:nth-child(12) {
+            background-position: -96px 0;
+            width: 71px;
+            /* margin: 0px 0px 27px 20px; */
+        }
+/*End Main*/
+
+/*Begin Footer*/
+.footer-container {
+    /* border: 5px solid orange;
+    box-sizing: border-box; */
+    grid-area: footer;
+    background: #F2F2F2;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-rows: 41px 40px;
+    /* place-self: stretch; */
+}
+
+.footer-container-up {
+    /* border: 5px solid orange;
+    box-sizing: border-box; */
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    /* place-self: stretch; */
+}
+
+.footer-container-down {
+    /* border: 5px solid orange;
+    box-sizing: border-box; */
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    /* place-self: stretch; */
+}
+/*End Footer*/
