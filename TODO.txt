@@ -1,0 +1,6 @@
+TO DO:
+- Make header sticky
+- add "Over samenvattingen" and "feaadback" below the first main-result-container
+- add links to <a href="#'></a> elementen
+- footer styling
+- clean up code
