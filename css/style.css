@@ -252,7 +252,7 @@ ul {
         border-radius: 8px;
         height: auto;
         width: 652px;
-        margin: 0px 0px 55px 20px; /*Normally 55px for bottom*/
+        margin: 0px 0px 0px 20px; /*Normally 55px for bottom*/
     }
 
         #main-first-content {
@@ -269,46 +269,47 @@ ul {
             padding: 0px 16px 16px 16px;
         }
 
-    /* .main-caption-container {
-        margin: 4px 0px 0px 20px;
+    .main-caption-container {
+        margin: 4px 0px 27px 20px;
         height: auto;
         width: 628px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        border: 1px solid red;
     }
 
         .main-summary-container {
-            border: 1px solid green;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+            margin-right: 27px;
         }
 
-        .main-feedback-container {
-            border: 1px solid blue;
-            margin-left: 27px;
-        }
+            .main-summary-container a{
+                color: #70757A;
+                font-size: 12px;
+                text-decoration: none;
+                line-height: 16px;
+                padding: 0;
+            }
+
+            .main-feedback-container a{
+                color: #70757A;
+                font-size: 12px;
+                text-decoration: none;
+                line-height: 16px;
+                padding: 0;
+            }
+
+            .main-caption-content {
+                display: flex;
+            }
 
             .main-caption-content svg {
-                border: 1px solid blue;
                 height: 14px;
                 width: 14px;
                 fill: #9E9E9E;
                 line-height: 16px;
                 margin-right: 8px;
             }
-
-            .main-caption-content a {
-                border: 1px solid blue;
-                color: #70757A;
-                font-size: 12px;
-                text-decoration: none;
-                line-height: 16px;
-            } */
-
 
     .main-result-container {
         /* border: 1px solid rgb(235, 235, 235); */
