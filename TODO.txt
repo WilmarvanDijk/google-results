@@ -1,6 +1,8 @@
 TO DO:
 - Make header sticky
-- add "Over samenvattingen" and "feaadback" below the first main-result-container
-- add links to <a href="#'></a> elementen
-- footer styling
+- Make links purple after visiting link
+- put every element in the right position
+- add "Over samenvattingen" and "feedback" below the first main-result-container (done)
+- add links to <a href="#'></a> elementen (done)
+- footer styling (done)
 - clean up code
